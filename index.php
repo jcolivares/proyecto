@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p><a href="alta.php">Dar de alta billetes</a></p>
     <p>La fecha del sistema:
         <?php
         echo date("Y-m-d h:m:s");
