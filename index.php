@@ -12,7 +12,8 @@
         ?>
     </p>
     <hr>
-    <form action="buscar.php" method="get">
+   <!--<form action="buscar.php" method="get">--> 
+    <form action="buscar.php" method="post">  
         <label for="serie">No. de serie</label>
         <input type="text" name="serie" id="serie" placeholder="Coloca el seriado de tu billete">
         <input type="submit" value="Enviar">
