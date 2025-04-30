@@ -7,6 +7,8 @@
 </head>
 <body>
     <p><a href="alta.php">Dar de alta billetes</a></p>
+    <p><a href="eliminar.php">Eliminar billetes</a></p>
+    <p><a href="modificar.php">Modioficar billetes</a></p>
     <p>La fecha del sistema:
         <?php
         echo date("Y-m-d h:m:s");
