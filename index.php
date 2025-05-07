@@ -1,26 +1,38 @@
+<?php
+session_start();
+
+$id = session_id();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bienvenidos Sistema X</title>
 </head>
 <body>
-    <p><a href="alta.php">Dar de alta billetes</a></p>
-    <p><a href="eliminar.php">Eliminar billetes</a></p>
-    <p><a href="modificar.php">Modioficar billetes</a></p>
-    <p>La fecha del sistema:
+    <header id="encabezado">
+        <h1>Bienvenidos Sistemas X</h1>
+        <p>Sesion:<?=$id;?></p>
+        <hr>
+    </header>
+    <main id="contenido">
         <?php
-        echo date("Y-m-d h:m:s");
+        if(!isset($_SESSION["logeado"])){
         ?>
-    </p>
-    <hr>
-   <!--<form action="buscar.php" method="get">--> 
-    <form action="buscar.php" method="post">  
-        <label for="serie">No. de serie</label>
-        <input type="text" name="serie" id="serie" placeholder="Coloca el seriado de tu billete">
-        <input type="submit" value="Enviar">
-    </form>
+        <form action="acceso.php" id="login" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" required>
+            <br>
+            <label for="contra">Password: </label>
+            <input type="password" name="contra" id="">
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
 
+        <?php
+}
+        ?>
+    </main>
 </body>
 </html>
