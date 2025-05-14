@@ -1,5 +1,6 @@
 <?php
 session_start();
+$error = $_GET["error"];
 
 $id = session_id();
 ?>
@@ -28,9 +29,31 @@ $id = session_id();
             <input type="password" name="contra" id="">
             <br>
             <button type="submit">Entrar</button>
+
+            <?php
+            if($error==1){
+            ?>
+            
+<p style="color: red; font-size: 2em;">El usuario y/o password no coincide</p>
+
+            <?php
+            }
+
+            if($error==2){
+                ?>
+<p style="color: yellow; font-size: 2em;">No tienes permiso para acceder a ese recurso favor de loguearse</p>
+                <?php
+            }
+            ?>
         </form>
 
         <?php
+}else{
+?>
+
+<p><a href="cerrar.php">Cerrar Sesion</a></p>
+
+<?php
 }
         ?>
     </main>

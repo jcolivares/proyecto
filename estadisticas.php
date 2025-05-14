@@ -25,10 +25,10 @@ if($tipo=="todos"){
     if($cantidad==0){
         $mensaje = '{"error": "no hay datos"}';
     }else{
-        $mensaje = '{ "temperaturas["';
+        $mensaje = '{ "temperaturas": [';
         for($i=0; $i<$cantidad; $i++){
             $fila=$resultado->fetch_assoc();
-            $mensaje.='{"id":'. $fila['id']. ', "ciudad": "' . $fila['ciudad']. ', ';
+            $mensaje.='{"id":'. $fila['id']. ', "ciudad": "' . $fila['ciudad']. '", ';
             $mensaje.='"mes": '. $fila['mes']. ', "temperatura":'. $fila['temperatura']. '}';
 
             if($i!= ($cantidad-1)){
