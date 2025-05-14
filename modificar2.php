@@ -54,6 +54,9 @@ $sql = "UPDATE billete
 <p>No se pudo modificar el registro seleccionado</p>
         <?php
     }
+
+    //Cerrar conexión
+    $conexion->close();
     ?>
 
     </main>

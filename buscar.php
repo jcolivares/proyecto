@@ -72,6 +72,9 @@ $serie = $_REQUEST["serie"];
         }else{
             echo "No hay resultados de la consultado";
         }
+
+        //cerrar conexion
+        $conexion->close();
         ?>
     </main>
 </body>

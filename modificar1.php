@@ -60,6 +60,9 @@ if ($result->num_rows == 1) {
         <p>No hay registros de billetes a modificar</p>
 <?php
 }//else
+
+//cerrar conexión
+$conexion->close();
 ?>
     </main>
     

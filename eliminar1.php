@@ -78,7 +78,10 @@ if($conexion->connect_error){
         <input type="submit" value="Estas realemnte seguro que deseas eliminar este billete?">
     </form>
         <?php
-    }//else    
+    }//else   
+    
+    //Cerrar conexión
+    $conexion->close();
         ?>
         
                 

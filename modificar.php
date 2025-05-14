@@ -75,6 +75,9 @@ $sql = "SELECT
 
     <?php
     }//else
+
+    //cerrar conexión
+    $conexion->close();
     ?>
     
 </body>

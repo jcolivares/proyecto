@@ -33,6 +33,9 @@ if ($conexion->connect_error) {
         if($result === "FALSE"){
             echo "<p>No se pudo borrar con exito</p>";
         }
+
+        //Cerrar conexión
+        $conexion->close();
         ?>
     </main>
 </body>

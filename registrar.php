@@ -39,6 +39,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             //echo "Se insertaron ".$resultado." registros";
             echo "Registro dado de alta";
         }
+
+        //Cerrar conexion
+        $conexion->close();
         ?>
 
         </p>
